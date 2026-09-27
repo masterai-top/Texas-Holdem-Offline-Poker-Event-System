@@ -1,179 +1,55 @@
-[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md)
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [圖文網站](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-tw/)
 
-# 線上與線下德州撲克賽事管理系統||德州源码
+# 德州撲克線下賽事管理系統原始碼
 
-🔥 Offline Poker Event & Tournament System | 離線賽事系統
+面向線上資格賽、線下比賽報名、賽事門票與現場比賽銜接的德州撲克賽事系統。倉庫包含 C++ 大廳與房間程式碼、Tars 介面、Protobuf/MySQL 相依設定、Unity 資源及真實產品畫面。
 
-👉 Club + Ranking + Ticket + Multiplayer Engine | Deployment requires independent technical and compliance review
+> 本倉庫展示專案程式碼與介面資料，不代表開箱即用的完整部署包。實際功能、相依、授權及合規要求應以程式碼、交付清單和目標地區規定為準。
 
+## 產品定位
 
----
+本專案聚焦「線上取得參賽資格，再銜接線下賽事」：玩家瀏覽線上賽事、查看報名資訊、兌換參賽權益，再由大廳、比賽房間與成員模組承接賽事流程。
 
+## 主要功能
 
-## 🧠 專案定位 / Project Overview
+- **賽事入口**：首頁與線上賽事列表呈現活動和資格賽入口。
+- **比賽報名**：展示條件、時間、報名資料與狀態。
+- **門票/權益兌換**：使用兌換列表和詳情頁承接線上資格與線下參賽權益。
+- **比賽房間管理**：支援房間建立、更新、查詢和成員資料操作介面。
+- **大廳與玩家服務**：包含玩家資料、帳戶、道具及大廳請求的程式結構。
+- **牌桌輔助畫面**：截圖包含勝率計算器與資料頁；可用功能須按交付版本核驗。
 
+## 賽事流程
 
-本項目為一套完整的德州撲克賽事系統（Tournament Platform）
+登入 → 瀏覽線上資格賽 → 查看比賽條件 → 報名或兌換權益 → 維護比賽房間與成員 → 銜接線下簽到、座位與賽程。線下執行模組是否完整包含，須依實際交付清單確認。
 
-This is a full poker tournament event platform
+## 產品截圖
 
+| 賽事首頁 | 線上賽事 | 比賽報名 |
+| --- | --- | --- |
+| ![德州撲克線下賽事首頁](Screenshots/0首页%20-%20副本.jpg) | ![線上資格賽列表](Screenshots/0线上赛事.jpg) | ![線下比賽報名](Screenshots/报名.jpg) |
 
-支援線下/線上賽事：
+| 權益兌換 | 兌換詳情 | 勝率計算器 |
+| --- | --- | --- |
+| ![賽事門票兌換](Screenshots/兑换01.jpg) | ![賽事兌換詳情](Screenshots/兑换02.jpg) | ![牌桌勝率計算器](Screenshots/胜率计算器1.jpg) |
 
+## 技術架構
 
-- 錦標賽系統 / Tournament system
+| 層級 | 可由倉庫確認的內容 |
+| --- | --- |
+| 服務端 | C++ 大廳服務、使用者處理、比賽房間與遊戲邏輯介面 |
+| RPC/協議 | Tars 與 `.tars` 定義 |
+| 資料 | Protobuf、MySQL 客戶端及資料代理介面 |
+| 客戶端資源 | Unity AssetBundle 與 manifest |
+| 建置 | Linux Makefile；需補齊並調整外部相依路徑 |
 
-- 賽事報名 / Event registration
+## 程式導讀與建置
 
-- 積分排名 / Ranking system
+`HallServer.*` 負責大廳服務；`RoomProcessor.*` 與 `RoomProto.tars` 處理比賽房間和成員；`UserInfoProcessor.*` 處理玩家資料。專案不是 Node.js 專案，請勿使用舊版 README 的 npm 指令。編譯前需準備 Tars、Protobuf、MySQL 及倉庫未包含的公共協議/模組。
 
-- 俱樂部系統 / Club system
+## 聯絡與核驗
 
-- 多桌比賽 / Multi-table tournaments
+Telegram：[@xuzongbin001](https://t.me/xuzongbin001) · Email：masterai918@gmail.com
 
+請在使用前核對演示、源碼範圍、第三方相依、智慧財產權和當地法規。本倉庫不構成收益、搜尋排名或上線承諾。
 
-👉 可用於商業賽事平台
-
-👉 Ready for commercial deployment
-
-
----
-
-
-## ⚙️ 核心功能 / Features
-
-
-- 賽事系統引擎 / Tournament engine
-
-- 積分排名機制 / Ranking system
-
-- 多桌比賽支援 / Multi-table tournament
-
-- 離線比賽模式 / Offline event mode
-
-- 可擴充俱樂部系統 / Club system
-
-
----
-
-
-## 🏆 使用場景 / Use Cases
-
-
-- 德州撲克比賽系統
-
-- 棋牌賽事平台
-
-- 俱樂部錦標賽
-
-- 線下比賽系統數位化
-
-
----
-
-
-## 🎮 賽事模式 / Tournament Types
-
-
-- Sit & Go
-
-- Multi Table Tournament (MTT)
-
-- Freezeout
-
-- Ranking League
-
-
----
-
-
-## 🚀 Quick Start
-
-git clone xxx
-
-cd server
-
-npm install
-
-npm run start
-
-## ✨ 核心特色 | Unique Features
-
-
-本項目是**支援線下賽事數位化**的德州撲克競技賽系統：
-
-
-| 特色模組 | 功能說明 |
-
-| :--- | :--- |
-
-| 🏆 **賽事系統** | 類似CPG、TJPT的線上比賽模式，支援打門票 |
-
-| 📊 **線下賽事管理** | 離線比賽模式、選手簽到、賽程管理 |
-
-| 👥 **俱樂部系統** | 俱樂部創建、內部賽事、排名系統 |
-
-| 🎫 **門票系統** | 線上報名、門票購買、對接國內賽事 |
-
-| 📈 **積分排名** | 選手積分、排行榜、賽季統計 |
-
-
-## 🎯 賽事模式 | Tournament Types
-
-
-| 模式 | 說明 |
-
-| :--- | :--- |
-
-| **Sit & Go** | 坐滿即玩，快速比賽 |
-
-| **MTT** | 多桌錦標賽，大規模賽事 |
-
-| **Freezeout** | 凍結賽制，無重購 |
-
-| **Ranking League** | 積分聯賽，賽季排名 |
-
-
-## 📸 介面預覽
-
-
-| 賽事大廳 | 牌桌介面 | 飯店預約 |
-<img width="720" height="1280" alt="0首页 - 副本" src="https://github.com/user-attachments/assets/5bcd9273-0ba3-435c-9a79-11d9b266d916" />
-<img width="720" height="1280" alt="胜率计算器1" src="https://github.com/user-attachments/assets/afbfa54d-8e10-4b99-ad18-73dbb49001d6" />
-<img width="720" height="1280" alt="我的收藏-成功" src="https://github.com/user-attachments/assets/bc519d8e-3a60-4a81-88f8-8d54b56da734" />
-<img width="720" height="1280" alt="0现场赛事" src="https://github.com/user-attachments/assets/336e6724-b3dd-4d11-a9ad-2277b3ac2b6b" />
-<img width="720" height="1280" alt="报名" src="https://github.com/user-attachments/assets/5b581a7e-58b0-49ee-acbd-5092ba018920" />
-<img width="720" height="1280" alt="0线上赛事" src="https://github.com/user-attachments/assets/32ef6751-700a-4058-85eb-14f720702ca8" />
-
-
-## 💰 联系
-
-
-
-
-📱 **Telegram：@xuzongbin001**
-
-📧 **Email：masterai918@gmail.com**
-
-
-## 📊 Screenshots
-
-
-- Lobby
-
-- Poker Table
-
-- Tournament
-
-- Club System
-
-## 🧠 Architecture
-
-
-👉 **聯絡我以取得示範站**
-
-
----
-
-
-⭐ Star 這個倉庫，支援優質德州賽事源碼持續分享！
