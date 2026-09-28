@@ -1,2 +1,154 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="../assets/favicon.png"><title>Texas Holdem Offline Tournament & Live Event Management Source</title><meta name="description" content="Texas Holdem offline tournament management source for online qualifiers, live-event registration, ticket exchange, match rooms, C++ Tars services and Unity UI."><link rel="canonical" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/en/"><link rel="alternate" hreflang="zh-CN" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-cn/"><link rel="alternate" hreflang="zh-TW" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-tw/"><link rel="alternate" hreflang="en" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/en/"><link rel="alternate" hreflang="x-default" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/"><meta property="og:image" content="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/assets/images/event-home.jpg"><link rel="stylesheet" href="../assets/style.css"></head><body><nav><div class="inner navrow"><a class="brand" href="../">Offline Poker Event System</a><span class="langs"><a href="../zh-cn/">简体</a><a href="../zh-tw/">繁體</a><a href="./">English</a></span></div></nav><header class="hero"><div class="inner"><div class="eyebrow">ONLINE QUALIFIER · LIVE EVENT</div><h1>Texas Holdem Offline Tournament Management</h1><p>Connect online qualification, live-event registration, tournament benefits and match-room operations in one documented player journey.</p><a class="button" href="#gallery">View product screens</a><a class="button secondary" href="https://github.com/masterai-top/Texas-Holdem-Offline-Poker-Event-System">View GitHub</a></div></header><main><section><h2>Product overview</h2><p class="lead">This is more than a generic poker-table sample. It documents the journey from discovering an online qualifier to registering for an offline poker event, while exposing C++ services for match rooms, participants and lobby requests.</p><div class="grid"><article class="card"><h3>Online qualifiers</h3><p>Event home and listings provide tournament discovery and qualification entry points.</p></article><article class="card"><h3>Registration and tickets</h3><p>Detail and exchange screens present the path to live-event eligibility.</p></article><article class="card"><h3>Match-room services</h3><p>Create, update and query rooms while maintaining participant state.</p></article></div></section><section><h2>Event journey</h2><div class="steps"><div class="step"><h3>Discover</h3><p>Sign in and browse qualifiers or the target live event.</p></div><div class="step"><h3>Register</h3><p>Review conditions, then register or exchange an eligible benefit.</p></div><div class="step"><h3>Compete</h3><p>Maintain room and participant state, then connect to verified on-site operations.</p></div></div></section><section id="gallery"><h2>Authentic product screenshots</h2><p class="lead">Every image below comes from the repository's Screenshots directory.</p><div class="gallery"><figure><img src="../assets/images/event-home.jpg" alt="Offline poker event home"><figcaption>Event home</figcaption></figure><figure><img src="../assets/images/online-events.jpg" alt="Online poker qualifiers"><figcaption>Online events</figcaption></figure><figure><img src="../assets/images/registration.jpg" alt="Live poker event registration"><figcaption>Registration</figcaption></figure><figure><img src="../assets/images/exchange-list.jpg" alt="Tournament ticket exchange"><figcaption>Benefit exchange</figcaption></figure><figure><img src="../assets/images/exchange-detail.jpg" alt="Tournament exchange detail"><figcaption>Exchange detail</figcaption></figure><figure><img src="../assets/images/login.jpg" alt="Poker event system login"><figcaption>Sign in</figcaption></figure><figure><img src="../assets/images/odds-calculator.jpg" alt="Poker odds calculator"><figcaption>Odds calculator</figcaption></figure><figure><img src="../assets/images/analytics.jpg" alt="Poker analytics interface"><figcaption>Analytics interface</figcaption></figure></div></section><section><h2>Technical structure</h2><table class="tech"><tr><th>Layer</th><th>Verifiable repository content</th></tr><tr><td>Server</td><td>C++ lobby, user, match-room and game-logic hooks</td></tr><tr><td>Contracts</td><td>Tars services and Protobuf references</td></tr><tr><td>Data</td><td>MySQL client and data-proxy interfaces</td></tr><tr><td>Client assets</td><td>Unity AssetBundles and manifests</td></tr></table><p class="note">This is not a Node.js project. The old npm quick start was inaccurate. Building requires compatible Tars, Protobuf, MySQL and external common modules referenced by the Makefile.</p></section></main><footer class="footer"><div class="inner">Verify features, dependencies, licensing and local compliance against the actual delivery scope.</div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../assets/favicon.png">
+<title>Texas Holdem Offline Tournament Management Source</title>
+<meta name="description" content="Texas Holdem offline tournament management source for online qualifiers, live-event registration, ticket exchange, match rooms, C++ Tars services and Unity UI.">
+<link rel="canonical" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/en/">
+<link rel="alternate" hreflang="zh-CN" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-cn/">
+<link rel="alternate" hreflang="zh-TW" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/en/">
+<link rel="alternate" hreflang="x-default" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/">
+<meta property="og:image" content="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/assets/images/event-home.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav>
+<div class="inner navrow">
+<a class="brand" href="../">Offline Poker Event System</a>
+<span class="langs">
+<a href="../zh-cn/">简体</a>
+<a href="../zh-tw/">繁體</a>
+<a href="./">English</a>
+</span>
+</div>
+</nav>
+<header class="hero">
+<div class="inner">
+<div class="eyebrow">ONLINE QUALIFIER · LIVE EVENT</div>
+<h1>Texas Holdem Offline Tournament Management</h1>
+<p>Connect online qualification, live-event registration, tournament benefits and match-room operations in one documented player journey.</p>
+<a class="button" href="#gallery">View product screens</a>
+<a class="button secondary" href="https://github.com/masterai-top/Texas-Holdem-Offline-Poker-Event-System">View GitHub</a>
+</div>
+</header>
+<main>
+<section>
+<h2>Product overview</h2>
+<p class="lead">This is more than a generic poker-table sample. It documents the journey from discovering an online qualifier to registering for an offline poker event, while exposing C++ services for match rooms, participants and lobby requests.</p>
+<div class="grid">
+<article class="card">
+<h3>Online qualifiers</h3>
+<p>Event home and listings provide tournament discovery and qualification entry points.</p>
+</article>
+<article class="card">
+<h3>Registration and tickets</h3>
+<p>Detail and exchange screens present the path to live-event eligibility.</p>
+</article>
+<article class="card">
+<h3>Match-room services</h3>
+<p>Create, update and query rooms while maintaining participant state.</p>
+</article>
+</div>
+</section>
+<section>
+<h2>Event journey</h2>
+<div class="steps">
+<div class="step">
+<h3>Discover</h3>
+<p>Sign in and browse qualifiers or the target live event.</p>
+</div>
+<div class="step">
+<h3>Register</h3>
+<p>Review conditions, then register or exchange an eligible benefit.</p>
+</div>
+<div class="step">
+<h3>Compete</h3>
+<p>Maintain room and participant state, then connect to verified on-site operations.</p>
+</div>
+</div>
+</section>
+<section id="gallery">
+<h2>Authentic product screenshots</h2>
+<p class="lead">Every image below comes from the repository's Screenshots directory.</p>
+<div class="gallery">
+<figure>
+<img src="../assets/images/event-home.jpg" alt="Offline poker event home">
+<figcaption>Event home</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/online-events.jpg" alt="Online poker qualifiers">
+<figcaption>Online events</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/registration.jpg" alt="Live poker event registration">
+<figcaption>Registration</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/exchange-list.jpg" alt="Tournament ticket exchange">
+<figcaption>Benefit exchange</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/exchange-detail.jpg" alt="Tournament exchange detail">
+<figcaption>Exchange detail</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/login.jpg" alt="Poker event system login">
+<figcaption>Sign in</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/odds-calculator.jpg" alt="Poker odds calculator">
+<figcaption>Odds calculator</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/analytics.jpg" alt="Poker analytics interface">
+<figcaption>Analytics interface</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<h2>Technical structure</h2>
+<table class="tech">
+<tr>
+<th>Layer</th>
+<th>Verifiable repository content</th>
+</tr>
+<tr>
+<td>Server</td>
+<td>C++ lobby, user, match-room and game-logic hooks</td>
+</tr>
+<tr>
+<td>Contracts</td>
+<td>Tars services and Protobuf references</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>MySQL client and data-proxy interfaces</td>
+</tr>
+<tr>
+<td>Client assets</td>
+<td>Unity AssetBundles and manifests</td>
+</tr>
+</table>
+<p class="note">This is not a Node.js project. The old npm quick start was inaccurate. Building requires compatible Tars, Protobuf, MySQL and external common modules referenced by the Makefile.</p>
+</section>
+<section class="topics">
+<h2>Event system topics</h2>
+<p class="lead">Explore the workflows that distinguish this repository from generic poker clubs and standalone MTT engines.</p>
+<div class="topic-grid">
+<a href="../online-qualifier/"><strong>Online qualifiers</strong><span>Event discovery and qualification</span></a>
+<a href="../live-event-registration/"><strong>Live-event registration</strong><span>Registration data and on-site handoff</span></a>
+<a href="../tournament-ticket/"><strong>Tournament tickets</strong><span>Entry benefit exchange journey</span></a>
+<a href="../match-room-server/"><strong>Match-room services</strong><span>C++/Tars room interfaces</span></a>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="inner">Verify features, dependencies, licensing and local compliance against the actual delivery scope.</div>
+</footer>
+</body>
+</html>
+
 

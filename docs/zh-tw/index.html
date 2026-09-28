@@ -1,2 +1,153 @@
-<!doctype html><html lang="zh-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="../assets/favicon.png"><title>德州撲克線下賽事管理系統原始碼｜報名與門票</title><meta name="description" content="德州撲克線下賽事管理原始碼：線上資格賽、線下比賽報名、賽事門票、比賽房間、C++ Tars 服務端與 Unity 真實畫面。"><link rel="canonical" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-tw/"><link rel="alternate" hreflang="zh-CN" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-cn/"><link rel="alternate" hreflang="zh-TW" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-tw/"><link rel="alternate" hreflang="en" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/en/"><link rel="alternate" hreflang="x-default" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/"><meta property="og:image" content="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/assets/images/event-home.jpg"><link rel="stylesheet" href="../assets/style.css"></head><body><nav><div class="inner navrow"><a class="brand" href="../">Offline Poker Event System</a><span class="langs"><a href="../zh-cn/">简体</a><a href="./">繁體</a><a href="../en/">English</a></span></div></nav><header class="hero"><div class="inner"><div class="eyebrow">線上資格 · 線下賽事</div><h1>德州撲克線下賽事管理系統</h1><p>以賽事入口、報名、門票權益和比賽房間，銜接線上資格賽與現場活動。</p><a class="button" href="#gallery">查看產品畫面</a><a class="button secondary" href="https://github.com/masterai-top/Texas-Holdem-Offline-Poker-Event-System">查看 GitHub</a></div></header><main><section><h2>產品介紹</h2><p class="lead">專案圍繞「發現賽事—參加資格賽—報名或兌換權益—進入比賽—銜接現場流程」組織入口，並包含比賽房間、成員和使用者服務的 C++ 程式碼。</p><div class="grid"><article class="card"><h3>線上資格賽</h3><p>首頁與賽事列表提供活動和資格入口。</p></article><article class="card"><h3>報名與門票</h3><p>報名詳情、參賽條件和權益兌換畫面。</p></article><article class="card"><h3>比賽房間</h3><p>房間建立、更新、查詢和成員狀態介面。</p></article></div></section><section><h2>賽事流程</h2><div class="steps"><div class="step"><h3>發現</h3><p>登入後瀏覽資格賽或目標現場活動。</p></div><div class="step"><h3>報名</h3><p>查看條件並報名或兌換參賽權益。</p></div><div class="step"><h3>參賽</h3><p>透過房間與成員介面維護狀態並銜接現場執行。</p></div></div></section><section id="gallery"><h2>真實產品截圖</h2><div class="gallery"><figure><img src="../assets/images/event-home.jpg" alt="德州撲克賽事首頁"><figcaption>賽事首頁</figcaption></figure><figure><img src="../assets/images/online-events.jpg" alt="線上資格賽"><figcaption>線上賽事</figcaption></figure><figure><img src="../assets/images/registration.jpg" alt="線下比賽報名"><figcaption>比賽報名</figcaption></figure><figure><img src="../assets/images/exchange-list.jpg" alt="賽事門票兌換"><figcaption>權益兌換</figcaption></figure><figure><img src="../assets/images/exchange-detail.jpg" alt="兌換詳情"><figcaption>兌換詳情</figcaption></figure><figure><img src="../assets/images/login.jpg" alt="系統登入"><figcaption>使用者登入</figcaption></figure><figure><img src="../assets/images/odds-calculator.jpg" alt="勝率計算器"><figcaption>勝率計算器</figcaption></figure><figure><img src="../assets/images/analytics.jpg" alt="牌桌資料介面"><figcaption>資料介面</figcaption></figure></div></section><section><h2>技術架構</h2><table class="tech"><tr><th>層級</th><th>可核驗內容</th></tr><tr><td>服務端</td><td>C++ 大廳、使用者、比賽房間與遊戲邏輯</td></tr><tr><td>協議</td><td>Tars 服務與 Protobuf 引用</td></tr><tr><td>資料</td><td>MySQL 客戶端與資料代理</td></tr><tr><td>客戶端資源</td><td>Unity AssetBundle 與 manifest</td></tr></table><p class="note">舊版 npm 啟動指令不適用。編譯前須準備相容的 Tars、Protobuf、MySQL 及外部公共模組。</p></section></main><footer class="footer"><div class="inner">請依實際交付清單核對功能、相依、授權與合規要求。</div></footer></body></html>
+<!doctype html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../assets/favicon.png">
+<title>德州撲克線下賽事管理系統原始碼｜報名與門票</title>
+<meta name="description" content="德州撲克線下賽事管理原始碼：線上資格賽、線下比賽報名、賽事門票、比賽房間、C++ Tars 服務端與 Unity 真實畫面。">
+<link rel="canonical" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-tw/">
+<link rel="alternate" hreflang="zh-CN" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-cn/">
+<link rel="alternate" hreflang="zh-TW" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/en/">
+<link rel="alternate" hreflang="x-default" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/">
+<meta property="og:image" content="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/assets/images/event-home.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav>
+<div class="inner navrow">
+<a class="brand" href="../">Offline Poker Event System</a>
+<span class="langs">
+<a href="../zh-cn/">简体</a>
+<a href="./">繁體</a>
+<a href="../en/">English</a>
+</span>
+</div>
+</nav>
+<header class="hero">
+<div class="inner">
+<div class="eyebrow">線上資格 · 線下賽事</div>
+<h1>德州撲克線下賽事管理系統</h1>
+<p>以賽事入口、報名、門票權益和比賽房間，銜接線上資格賽與現場活動。</p>
+<a class="button" href="#gallery">查看產品畫面</a>
+<a class="button secondary" href="https://github.com/masterai-top/Texas-Holdem-Offline-Poker-Event-System">查看 GitHub</a>
+</div>
+</header>
+<main>
+<section>
+<h2>產品介紹</h2>
+<p class="lead">專案圍繞「發現賽事—參加資格賽—報名或兌換權益—進入比賽—銜接現場流程」組織入口，並包含比賽房間、成員和使用者服務的 C++ 程式碼。</p>
+<div class="grid">
+<article class="card">
+<h3>線上資格賽</h3>
+<p>首頁與賽事列表提供活動和資格入口。</p>
+</article>
+<article class="card">
+<h3>報名與門票</h3>
+<p>報名詳情、參賽條件和權益兌換畫面。</p>
+</article>
+<article class="card">
+<h3>比賽房間</h3>
+<p>房間建立、更新、查詢和成員狀態介面。</p>
+</article>
+</div>
+</section>
+<section>
+<h2>賽事流程</h2>
+<div class="steps">
+<div class="step">
+<h3>發現</h3>
+<p>登入後瀏覽資格賽或目標現場活動。</p>
+</div>
+<div class="step">
+<h3>報名</h3>
+<p>查看條件並報名或兌換參賽權益。</p>
+</div>
+<div class="step">
+<h3>參賽</h3>
+<p>透過房間與成員介面維護狀態並銜接現場執行。</p>
+</div>
+</div>
+</section>
+<section id="gallery">
+<h2>真實產品截圖</h2>
+<div class="gallery">
+<figure>
+<img src="../assets/images/event-home.jpg" alt="德州撲克賽事首頁">
+<figcaption>賽事首頁</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/online-events.jpg" alt="線上資格賽">
+<figcaption>線上賽事</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/registration.jpg" alt="線下比賽報名">
+<figcaption>比賽報名</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/exchange-list.jpg" alt="賽事門票兌換">
+<figcaption>權益兌換</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/exchange-detail.jpg" alt="兌換詳情">
+<figcaption>兌換詳情</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/login.jpg" alt="系統登入">
+<figcaption>使用者登入</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/odds-calculator.jpg" alt="勝率計算器">
+<figcaption>勝率計算器</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/analytics.jpg" alt="牌桌資料介面">
+<figcaption>資料介面</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<h2>技術架構</h2>
+<table class="tech">
+<tr>
+<th>層級</th>
+<th>可核驗內容</th>
+</tr>
+<tr>
+<td>服務端</td>
+<td>C++ 大廳、使用者、比賽房間與遊戲邏輯</td>
+</tr>
+<tr>
+<td>協議</td>
+<td>Tars 服務與 Protobuf 引用</td>
+</tr>
+<tr>
+<td>資料</td>
+<td>MySQL 客戶端與資料代理</td>
+</tr>
+<tr>
+<td>客戶端資源</td>
+<td>Unity AssetBundle 與 manifest</td>
+</tr>
+</table>
+<p class="note">舊版 npm 啟動指令不適用。編譯前須準備相容的 Tars、Protobuf、MySQL 及外部公共模組。</p>
+</section>
+<section class="topics">
+<h2>賽事系統專題</h2>
+<p class="lead">進一步了解本專案與一般德州俱樂部、通用 MTT 引擎不同的核心流程。</p>
+<div class="topic-grid">
+<a href="../online-qualifier/"><strong>線上資格賽</strong><span>賽事發現與資格入口</span></a>
+<a href="../live-event-registration/"><strong>線下賽事報名</strong><span>報名資料與現場銜接</span></a>
+<a href="../tournament-ticket/"><strong>賽事門票與權益</strong><span>參賽權益兌換路徑</span></a>
+<a href="../match-room-server/"><strong>比賽房間服務</strong><span>C++/Tars 房間介面</span></a>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="inner">請依實際交付清單核對功能、相依、授權與合規要求。</div>
+</footer>
+</body>
+</html>
+
 

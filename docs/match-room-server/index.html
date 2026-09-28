@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>德州扑克比赛房间服务源码｜C++ Tars赛事系统</title>
+  <meta name="description" content="德州扑克比赛房间服务源码专题，介绍 C++ 大厅、Tars 协议、房间创建查询、参赛成员状态、MySQL 与 Unity 资源边界。">
+  <link rel="canonical" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/match-room-server/">
+  <link rel="icon" href="../assets/favicon.png">
+  <meta property="og:title" content="德州扑克比赛房间 C++ Tars 服务源码">
+  <meta property="og:description" content="比赛房间、参赛成员与大厅服务的可核验技术结构。">
+  <meta property="og:image" content="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/assets/images/event-home.jpg">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav>
+<div class="inner navrow">
+<a class="brand" href="../">Offline Poker Event System</a>
+<span class="langs">
+<a href="../zh-cn/">简体主页</a>
+<a href="../zh-tw/">繁體</a>
+<a href="../en/">English</a>
+</span>
+</div>
+</nav>
+  <main>
+    <section class="topic-hero">
+      <div>
+<div class="breadcrumb">
+<a href="../">项目主页</a> / 比赛房间服务</div>
+<div class="eyebrow">C++ · TARS · MATCH ROOM</div>
+<h1>德州扑克比赛房间服务源码</h1>
+<p class="lead">这一专题解释报名之后由哪些公开代码承接比赛流程：C++ 大厅服务处理请求，Tars 协议描述比赛房间与成员结构，数据访问层连接 MySQL 和 Tars 数据代理。</p>
+<a class="button" href="https://github.com/masterai-top/Texas-Holdem-Offline-Poker-Event-System">查看代码仓库</a>
+</div>
+      <img src="../assets/images/event-home.jpg" alt="德州扑克线下赛事系统首页真实产品截图">
+    </section>
+    <section>
+<h2>服务端代码地图</h2>
+<div class="feature-list">
+<article>
+<h3>HallServer.*</h3>
+<p>大厅服务启动、配置加载和服务生命周期相关入口。</p>
+</article>
+<article>
+<h3>HallServantImp.h</h3>
+<p>用户、账户、比赛房间等大厅请求接口。</p>
+</article>
+<article>
+<h3>RoomProcessor.*</h3>
+<p>比赛房间创建、更新、列表查询、成员更新和删除等数据操作。</p>
+</article>
+<article>
+<h3>RoomProto.tars</h3>
+<p>比赛房间、参赛成员及相关请求/响应结构定义。</p>
+</article>
+<article>
+<h3>UserInfoProcessor.*</h3>
+<p>用户资料与相关业务数据的处理结构。</p>
+</article>
+<article>
+<h3>game*.cpp / sitdown.cpp</h3>
+<p>牌桌开始、参数、活动和入座相关的游戏逻辑入口。</p>
+</article>
+</div>
+</section>
+    <section>
+<h2>技术栈与构建边界</h2>
+<table class="tech">
+<tr>
+<th>层级</th>
+<th>仓库可确认内容</th>
+</tr>
+<tr>
+<td>服务端</td>
+<td>C++ 大厅、用户、比赛房间与游戏逻辑接口</td>
+</tr>
+<tr>
+<td>RPC/协议</td>
+<td>Tars 服务和 `.tars` 协议定义</td>
+</tr>
+<tr>
+<td>序列化</td>
+<td>Protobuf 依赖与生成头文件引用</td>
+</tr>
+<tr>
+<td>数据</td>
+<td>MySQL 客户端与 Tars 数据代理接口</td>
+</tr>
+<tr>
+<td>客户端</td>
+<td>Unity AssetBundle 及 manifest 资源</td>
+</tr>
+<tr>
+<td>构建</td>
+<td>Linux Makefile，需补齐外部公共协议、库和环境路径</td>
+</tr>
+</table>
+<p class="source-note">仓库不是 Node.js 项目，也不是开箱即用的完整部署包。编译前应审计 Tars、Protobuf、MySQL、内部公共模块及 Makefile 路径。</p>
+</section>
+    <section>
+<div class="cta-band">
+<div>
+<h2>从技术结构返回产品流程</h2>
+<p>比赛房间服务承接资格、报名和赛事权益之后的参赛状态。</p>
+</div>
+<div>
+<a class="button" href="../live-event-registration/">报名系统</a>
+<a class="button secondary" href="../tournament-ticket/">赛事权益</a>
+</div>
+</div>
+</section>
+  </main>
+  <footer class="footer">
+<div class="inner">Telegram：<a href="https://t.me/xuzongbin001">@xuzongbin001</a> · Email：<a href="mailto:masterai918@gmail.com">masterai918@gmail.com</a>
+</div>
+</footer>
+</body>
+</html>
+

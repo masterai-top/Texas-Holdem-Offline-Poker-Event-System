@@ -1,5 +1,7 @@
 [简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [图文网站](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/)
 
+**赛事专题：** [线上资格赛](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/online-qualifier/) · [线下赛事报名](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/live-event-registration/) · [赛事门票与权益](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/tournament-ticket/) · [C++/Tars 比赛房间](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/match-room-server/)
+
 # 德州扑克线下赛事管理系统源码
 
 面向线上资格赛、线下比赛报名、赛事门票与现场比赛衔接的德州扑克赛事系统。仓库包含 C++ 大厅与房间相关代码、Tars 接口、Protobuf/MySQL 依赖配置、Unity 资源和真实产品界面，适合用于研究德州赛事管理、比赛房间与玩家流程。
@@ -81,4 +83,3 @@
 - Email：masterai918@gmail.com
 
 如需评估，请先核对演示、源码范围、第三方依赖、构建流程、知识产权和当地法规。仓库内容不构成收益、排名或上线承诺。
-

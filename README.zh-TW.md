@@ -1,5 +1,7 @@
 [简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [圖文網站](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-tw/)
 
+**賽事專題：** [線上資格賽](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/online-qualifier/) · [線下賽事報名](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/live-event-registration/) · [賽事門票與權益](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/tournament-ticket/) · [C++/Tars 比賽房間](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/match-room-server/)
+
 # 德州撲克線下賽事管理系統原始碼
 
 面向線上資格賽、線下比賽報名、賽事門票與現場比賽銜接的德州撲克賽事系統。倉庫包含 C++ 大廳與房間程式碼、Tars 介面、Protobuf/MySQL 相依設定、Unity 資源及真實產品畫面。
@@ -52,4 +54,3 @@
 Telegram：[@xuzongbin001](https://t.me/xuzongbin001) · Email：masterai918@gmail.com
 
 請在使用前核對演示、源碼範圍、第三方相依、智慧財產權和當地法規。本倉庫不構成收益、搜尋排名或上線承諾。
-

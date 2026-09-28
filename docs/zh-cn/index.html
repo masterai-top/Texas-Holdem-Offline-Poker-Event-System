@@ -1,2 +1,154 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="../assets/favicon.png"><title>德州扑克线下赛事系统源码｜报名、门票与比赛管理</title><meta name="description" content="图文介绍德州扑克线下赛事管理源码：线上资格赛、比赛报名、门票权益、赛事房间、C++ Tars 服务端与 Unity 界面。"><link rel="canonical" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-cn/"><link rel="alternate" hreflang="zh-CN" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-cn/"><link rel="alternate" hreflang="zh-TW" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-tw/"><link rel="alternate" hreflang="en" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/en/"><link rel="alternate" hreflang="x-default" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/"><meta property="og:image" content="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/assets/images/event-home.jpg"><link rel="stylesheet" href="../assets/style.css"></head><body><nav><div class="inner navrow"><a class="brand" href="../">Offline Poker Event System</a><span class="langs"><a href="./">简体</a><a href="../zh-tw/">繁體</a><a href="../en/">English</a></span></div></nav><header class="hero"><div class="inner"><div class="eyebrow">线上资格 · 线下赛事</div><h1>德州扑克线下赛事管理系统</h1><p>用赛事发现、报名、门票权益和比赛房间，衔接线上资格赛与现场活动。</p><a class="button" href="#gallery">查看产品界面</a><a class="button secondary" href="https://github.com/masterai-top/Texas-Holdem-Offline-Poker-Event-System">查看源码仓库</a></div></header><main><section><h2>产品介绍</h2><p class="lead">这套德州扑克赛事管理项目不是单一牌桌演示。它围绕“发现赛事—参加资格赛—报名或兑换权益—进入比赛—衔接现场流程”组织用户入口，并包含比赛房间、成员与用户服务的 C++ 代码。</p><div class="grid"><article class="card"><h3>赛事入口</h3><p>首页与线上赛事列表帮助玩家查看活动和资格入口。</p></article><article class="card"><h3>报名与权益</h3><p>报名页及兑换界面展示参赛条件和权益路径。</p></article><article class="card"><h3>服务端流程</h3><p>房间创建、查询、更新及成员状态接口承接比赛过程。</p></article></div></section><section><h2>玩家赛事流程</h2><div class="steps"><div class="step"><h3>发现赛事</h3><p>登录后从首页进入线上资格赛或目标线下活动。</p></div><div class="step"><h3>报名/兑换</h3><p>查看条件和时间，完成报名或兑换参赛权益。</p></div><div class="step"><h3>进入比赛</h3><p>由比赛房间和成员接口维护赛事状态，再衔接现场运营。</p></div></div></section><section id="gallery"><h2>产品截图</h2><p class="lead">以下图片均来自仓库 `Screenshots` 目录，不使用虚构后台或无关素材。</p><div class="gallery"><figure><img src="../assets/images/event-home.jpg" alt="德州扑克赛事首页"><figcaption>赛事首页</figcaption></figure><figure><img src="../assets/images/online-events.jpg" alt="线上资格赛列表"><figcaption>线上赛事</figcaption></figure><figure><img src="../assets/images/registration.jpg" alt="线下赛事报名页面"><figcaption>比赛报名</figcaption></figure><figure><img src="../assets/images/exchange-list.jpg" alt="赛事门票权益兑换"><figcaption>权益兑换</figcaption></figure><figure><img src="../assets/images/exchange-detail.jpg" alt="赛事兑换详情"><figcaption>兑换详情</figcaption></figure><figure><img src="../assets/images/login.jpg" alt="德州扑克赛事系统登录"><figcaption>用户登录</figcaption></figure><figure><img src="../assets/images/odds-calculator.jpg" alt="牌桌胜率计算器"><figcaption>胜率计算器</figcaption></figure><figure><img src="../assets/images/analytics.jpg" alt="牌桌数据分析界面"><figcaption>数据界面</figcaption></figure></div></section><section><h2>技术与源码范围</h2><table class="tech"><tr><th>层级</th><th>仓库可核验内容</th></tr><tr><td>服务端</td><td>C++ 大厅服务、用户处理、比赛房间与游戏逻辑入口</td></tr><tr><td>通信</td><td>Tars 服务、Tars 协议和 Protobuf 引用</td></tr><tr><td>数据</td><td>MySQL 客户端与数据代理接口</td></tr><tr><td>客户端资源</td><td>Unity AssetBundle 及 manifest 文件</td></tr></table><p class="note">仓库并非 Node.js 项目；旧版 README 的 npm 快速启动指令不正确。Makefile 引用了外部公共协议和依赖路径，编译前必须完成依赖与交付范围核验。</p></section></main><footer class="footer"><div class="inner">请按实际交付清单核对功能、构建依赖、授权与当地合规要求。</div></footer></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../assets/favicon.png">
+<title>德州扑克线下赛事系统源码｜报名、门票与比赛管理</title>
+<meta name="description" content="图文介绍德州扑克线下赛事管理源码：线上资格赛、比赛报名、门票权益、赛事房间、C++ Tars 服务端与 Unity 界面。">
+<link rel="canonical" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-cn/">
+<link rel="alternate" hreflang="zh-CN" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-cn/">
+<link rel="alternate" hreflang="zh-TW" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/en/">
+<link rel="alternate" hreflang="x-default" href="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/">
+<meta property="og:image" content="https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/assets/images/event-home.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav>
+<div class="inner navrow">
+<a class="brand" href="../">Offline Poker Event System</a>
+<span class="langs">
+<a href="./">简体</a>
+<a href="../zh-tw/">繁體</a>
+<a href="../en/">English</a>
+</span>
+</div>
+</nav>
+<header class="hero">
+<div class="inner">
+<div class="eyebrow">线上资格 · 线下赛事</div>
+<h1>德州扑克线下赛事管理系统</h1>
+<p>用赛事发现、报名、门票权益和比赛房间，衔接线上资格赛与现场活动。</p>
+<a class="button" href="#gallery">查看产品界面</a>
+<a class="button secondary" href="https://github.com/masterai-top/Texas-Holdem-Offline-Poker-Event-System">查看源码仓库</a>
+</div>
+</header>
+<main>
+<section>
+<h2>产品介绍</h2>
+<p class="lead">这套德州扑克赛事管理项目不是单一牌桌演示。它围绕“发现赛事—参加资格赛—报名或兑换权益—进入比赛—衔接现场流程”组织用户入口，并包含比赛房间、成员与用户服务的 C++ 代码。</p>
+<div class="grid">
+<article class="card">
+<h3>赛事入口</h3>
+<p>首页与线上赛事列表帮助玩家查看活动和资格入口。</p>
+</article>
+<article class="card">
+<h3>报名与权益</h3>
+<p>报名页及兑换界面展示参赛条件和权益路径。</p>
+</article>
+<article class="card">
+<h3>服务端流程</h3>
+<p>房间创建、查询、更新及成员状态接口承接比赛过程。</p>
+</article>
+</div>
+</section>
+<section>
+<h2>玩家赛事流程</h2>
+<div class="steps">
+<div class="step">
+<h3>发现赛事</h3>
+<p>登录后从首页进入线上资格赛或目标线下活动。</p>
+</div>
+<div class="step">
+<h3>报名/兑换</h3>
+<p>查看条件和时间，完成报名或兑换参赛权益。</p>
+</div>
+<div class="step">
+<h3>进入比赛</h3>
+<p>由比赛房间和成员接口维护赛事状态，再衔接现场运营。</p>
+</div>
+</div>
+</section>
+<section id="gallery">
+<h2>产品截图</h2>
+<p class="lead">以下图片均来自仓库 `Screenshots` 目录，不使用虚构后台或无关素材。</p>
+<div class="gallery">
+<figure>
+<img src="../assets/images/event-home.jpg" alt="德州扑克赛事首页">
+<figcaption>赛事首页</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/online-events.jpg" alt="线上资格赛列表">
+<figcaption>线上赛事</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/registration.jpg" alt="线下赛事报名页面">
+<figcaption>比赛报名</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/exchange-list.jpg" alt="赛事门票权益兑换">
+<figcaption>权益兑换</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/exchange-detail.jpg" alt="赛事兑换详情">
+<figcaption>兑换详情</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/login.jpg" alt="德州扑克赛事系统登录">
+<figcaption>用户登录</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/odds-calculator.jpg" alt="牌桌胜率计算器">
+<figcaption>胜率计算器</figcaption>
+</figure>
+<figure>
+<img src="../assets/images/analytics.jpg" alt="牌桌数据分析界面">
+<figcaption>数据界面</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<h2>技术与源码范围</h2>
+<table class="tech">
+<tr>
+<th>层级</th>
+<th>仓库可核验内容</th>
+</tr>
+<tr>
+<td>服务端</td>
+<td>C++ 大厅服务、用户处理、比赛房间与游戏逻辑入口</td>
+</tr>
+<tr>
+<td>通信</td>
+<td>Tars 服务、Tars 协议和 Protobuf 引用</td>
+</tr>
+<tr>
+<td>数据</td>
+<td>MySQL 客户端与数据代理接口</td>
+</tr>
+<tr>
+<td>客户端资源</td>
+<td>Unity AssetBundle 及 manifest 文件</td>
+</tr>
+</table>
+<p class="note">仓库并非 Node.js 项目；旧版 README 的 npm 快速启动指令不正确。Makefile 引用了外部公共协议和依赖路径，编译前必须完成依赖与交付范围核验。</p>
+</section>
+<section class="topics">
+<h2>赛事系统专题</h2>
+<p class="lead">进一步了解本项目区别于普通德州俱乐部和通用 MTT 引擎的核心流程。</p>
+<div class="topic-grid">
+<a href="../online-qualifier/"><strong>线上资格赛</strong><span>赛事发现与资格入口</span></a>
+<a href="../live-event-registration/"><strong>线下赛事报名</strong><span>报名资料与现场衔接</span></a>
+<a href="../tournament-ticket/"><strong>赛事门票与权益</strong><span>参赛权益兑换路径</span></a>
+<a href="../match-room-server/"><strong>比赛房间服务</strong><span>C++/Tars 房间接口</span></a>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="inner">请按实际交付清单核对功能、构建依赖、授权与当地合规要求。</div>
+</footer>
+</body>
+</html>
+
 

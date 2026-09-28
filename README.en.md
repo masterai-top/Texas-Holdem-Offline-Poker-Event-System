@@ -1,5 +1,7 @@
 [简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [Visual website](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/en/)
 
+**Event topics:** [Online qualifiers](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/online-qualifier/) · [Live-event registration](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/live-event-registration/) · [Tournament tickets](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/tournament-ticket/) · [C++/Tars match rooms](https://masterai-top.github.io/Texas-Holdem-Offline-Poker-Event-System/match-room-server/)
+
 # Texas Holdem Offline Poker Event Management Source Code
 
 A Texas Holdem event system centered on online qualifiers, live-event registration, tournament ticket exchange and the transition to an offline competition. The repository contains C++ lobby and match-room code, Tars interfaces, Protobuf/MySQL configuration, Unity assets and authentic product screenshots.
@@ -57,4 +59,3 @@ Rather than presenting a generic poker table, this project documents a player jo
 Telegram: [@xuzongbin001](https://t.me/xuzongbin001) · Email: masterai918@gmail.com
 
 Review the demo, source scope, dependencies, intellectual-property status and applicable laws before use. No deployment, revenue or search-ranking outcome is guaranteed.
-
